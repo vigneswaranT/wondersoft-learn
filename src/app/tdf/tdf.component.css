@@ -1,8 +1,9 @@
 
-.continer{
+.container{
     padding-left: 40px;
-    width: 200px;
+    width: 500px;
     border: 2px solid black;
+    height: 530px;
 
 }
 input.ng-invalid{

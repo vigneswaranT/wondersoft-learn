@@ -1,4 +1,4 @@
-<form > 
+<form  #form = 'ngForm' ngForm> 
     <h2>simple login form</h2>
 
 <div class="container">
@@ -67,7 +67,7 @@
     <div class="form-group">
         <label class="control-label col-sm-2" for="phone">phoneNumber:</label>
         <div class="col-sm-10">
-            <input type="text" #phoneNumber="ngModel" minlength="10" maxlength="13" class="form-control" required
+            <input type="number" #phoneNumber="ngModel" minlength="10" maxlength="10" class="form-control" required
                 placeholder="Enter phoneNumber" name="phoneNumber" ngModel>
             <div>
                 <span class="text text-danger" *ngIf="phoneNumber.touched && phoneNumber.invalid"> phoneNumber Requried
@@ -75,7 +75,7 @@
             </div>
             <div *ngIf="phoneNumber.errors && phoneNumber.dirty">
 
-                <div class="alert-danger" *ngIf="phoneNumber.errors?.['minlength']">phoneNumber should have minimum 10
+                <div class="alert-danger" *ngIf="phoneNumber.errors?.['maxlength']">phoneNumber should have minimum 10
                     characters </div>
                 <div *ngIf="phoneNumber.valid">
                     <div class="alert-success" *ngIf="phoneNumber.valid">phoneNumber success</div>
@@ -86,7 +86,7 @@
     <div class="form-group">
         <label class="control-label col-sm-2" for="address">address:</label>
         <div class="col-sm-10">
-            <input type="text" #address="ngModel" minlength="10" maxlength="20" class="form-control" required
+            <input type="text" #address="ngModel" minlength="10" maxlength="10" class="form-control" required
                 placeholder="Enter address" name="addressr" ngModel>
 
             <div *ngIf="address.errors && address.dirty">
@@ -120,13 +120,13 @@
         </div>
     </div>
 
-
+    <div>
+        <button type="submit" class="btn-success" [disabled]="!form.valid">Submit</button>
+        
+        </div>
 
 </div>
-<div>
-<button type="submit" class="btn-success" [disabled]="zipcode.invalid">Submit</button>
 
-</div>
 
 </form>
 
