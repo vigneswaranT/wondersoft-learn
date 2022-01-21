@@ -1,0 +1,24 @@
+
+<form [formGroup]="loginForm">
+ 
+
+    <div class="form-group">
+        <label for="email">Email:</label> 
+        <input type="email"  class="form-control"     placeholder="Enter email"  formControlname="email"name="email1">
+        <span class="error" *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">email is
+            required</span>
+
+    </div>
+
+    <div class="form-group">
+        <label for="pwd">Password:</label>
+
+        <input type="password"  class="form-control" placeholder="Enter password" formControlname="pswd" name="pswd">
+        <span class="error" *ngIf="loginForm.get('pswd')?.invalid && loginForm.get('pswd')?.touched">password is
+            required</span>
+
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

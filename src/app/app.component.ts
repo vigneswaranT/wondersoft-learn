@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+// import { BankComponent } from './bank/bank.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pro';
+  // {
+  //   path="bank",
+  //   Component:BankComponent;
+  // }
+  // {
+  //   path:"addaccound"
+  // }
 }
