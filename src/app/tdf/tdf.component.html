@@ -103,12 +103,14 @@
     <div class="form-group">
         <label class="control-label col-sm-2" for="zipcode">Zipcode:</label>
         <div class="col-sm-10">
-            <input type="text" #zipcode="ngModel" minlength="6" class="form-control" required
+            <input type="text" #zipcode="ngModel"
+             minlength="6" class="form-control" required
                 placeholder="Enter zipcode" name="zipcode" ngModel>
             <div>
                 <span class="text text-danger" *ngIf="zipcode.touched && zipcode.invalid"> zipcode Requried
                 </span>
             </div>
+            <h2>welcome</h2>
             <div *ngIf="zipcode.errors && zipcode.dirty">
 
                 <div class="alert-danger" *ngIf="zipcode.errors?.['minlength']">zipcode should have minimum 6
